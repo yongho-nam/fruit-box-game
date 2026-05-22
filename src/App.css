@@ -200,6 +200,7 @@ h1 {
   pointer-events: none;
   object-fit: contain;
   filter: drop-shadow(0 8px 8px rgba(106, 32, 24, 0.18));
+  transform: scale(var(--fruit-scale, 1));
 }
 
 .fruit-tile span {
@@ -316,8 +317,20 @@ h1 {
   }
 
   .board {
+    --gap: 1px;
+    --fruit-scale: 1.2;
     grid-template-columns: repeat(var(--cols), minmax(16px, 1fr));
+    padding: 8px;
     border-width: 2px;
     border-radius: 18px;
+  }
+
+  .fruit-tile span {
+    font-size: clamp(1rem, 4.2vw, 1.7rem);
+  }
+
+  .result-modal img {
+    width: 132px;
+    height: 132px;
   }
 }
